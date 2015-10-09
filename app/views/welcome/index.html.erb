@@ -134,12 +134,12 @@
                   </div>
                 </div>
                 <div class="list-group but-grp">
-                <button type="button" class="list-group-item first_but cus-but">
+                <button type="button" class="list-group-item first_but cus-but" onClick="window.open('<%= @staffnews.first.linkd %>','_blank')">
                   <span class="ghost"></span>
                   <%= raw(@staffnews.first.stnews) %>
                 </button>
                 <% @staffnews.where.not(id: @staffnews.first.id).each do |stnews| %>
-                  <button type="button" class="list-group-item cus-but">
+                  <button type="button" class="list-group-item cus-but" onClick="window.open('<%= stnews.linkd %>','_blank')">
                     <span class="ghost"></span>
                     <%= stnews.stnews %>
                   </button>
@@ -173,15 +173,15 @@
                 <div class="list-group but-grp">
 
                   
-                    <button type="button" class="list-group-item first_but cus-but">
+                    <button type="button" class="list-group-item first_but cus-but" onClick="window.open('<%= @studentnews.first.linkd %>','_blank')">
                       <span class="ghost"></span>
                       <%= raw(@studentnews.first.stnews) %>
                     </button>
                   
                   <% @studentnews.where.not(id: @studentnews.first.id).each do |stnews| %>
-                    <button type="button" class="list-group-item cus-but">
+                    <button type="button" class="list-group-item cus-but" onClick="window.open('<%= stnews.linkd %>','_blank')">
                       <span class="ghost"></span>
-                      <%= raw(stnews.stnews) %>
+                      <%= stnews.stnews %>
                     </button>
                   <% end %>
                 </div>
