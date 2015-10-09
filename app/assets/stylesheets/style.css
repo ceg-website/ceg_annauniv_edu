@@ -1,3 +1,14 @@
+
+.save-me img{
+	width: 25px !important;
+	padding-bottom: 0px !important;
+}
+
+.save-me tr{
+	height: 30px !important;
+}
+
+
 @media only screen and (max-width: 1100px) {
     .logo {
         display: none;
@@ -292,7 +303,10 @@ h3{
 	font-size: 20px;
 }
 
+.game tr{
+	height: 30px !important;
 
+}
 .get-grey{
 	color: grey;
 	
