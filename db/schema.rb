@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151006093258) do
+ActiveRecord::Schema.define(version: 20151009130407) do
 
   create_table "articles", force: :cascade do |t|
     t.string   "title"
@@ -105,6 +105,7 @@ ActiveRecord::Schema.define(version: 20151006093258) do
     t.text     "cont"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "idr"
   end
 
   create_table "researches", force: :cascade do |t|
@@ -142,6 +143,7 @@ ActiveRecord::Schema.define(version: 20151006093258) do
     t.integer  "stid"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "linkd"
   end
 
   create_table "studentnews", force: :cascade do |t|
@@ -149,12 +151,14 @@ ActiveRecord::Schema.define(version: 20151006093258) do
     t.integer  "stid"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "linkd"
   end
 
   create_table "thirukurals", force: :cascade do |t|
     t.text     "cont"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "idr"
   end
 
   create_table "users", force: :cascade do |t|

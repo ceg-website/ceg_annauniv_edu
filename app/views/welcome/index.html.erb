@@ -141,7 +141,7 @@
                 <% @staffnews.where.not(id: @staffnews.first.id).each do |stnews| %>
                   <button type="button" class="list-group-item cus-but">
                     <span class="ghost"></span>
-                    <%= raw(stnews.stnews) %>
+                    <%= stnews.stnews %>
                   </button>
                   <% end %>
                 </div>
