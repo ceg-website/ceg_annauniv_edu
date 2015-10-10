@@ -6,9 +6,15 @@
           <h2><%= @gallery.title %></h2>
   
      <center>
-		<%= image_tag  @gallery.image %>
+		<br/>
+		<%= image_tag  @gallery.image ,class:"col-md-12" %>
              <br/>  
- <%= link_to 'Back to Gallery', galleries_path, class:"btn btn-danger" %>
+	<a href="/galleries">     
+            <button  class= "btn btn-danger form-control">
+              Back to Gallery
+            </button>
+         </a>
+
   </center>
       </div>
       </div>

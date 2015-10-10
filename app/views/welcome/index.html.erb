@@ -1,13 +1,13 @@
  <div class="carousel slide col-md-12 car_markup" id="carousel-834021" data-ride="carousel">
           
           <ol class="carousel-indicators ind_markup">
-            <li class="active go" data-slide-to="0" data-target="#carousel-834021">
-            </li>
-            <li class="go" data-slide-to="1" data-target="#carousel-834021">
+            <li class="active go" data-slide-to="3" data-target="#carousel-834021">
             </li>
             <li class="go" data-slide-to="2" data-target="#carousel-834021">
             </li>
-            <li class="go" data-slide-to="3" data-target="#carousel-834021">
+            <li class="go" data-slide-to="1" data-target="#carousel-834021">
+            </li>
+            <li class="go" data-slide-to="0" data-target="#carousel-834021">
             </li>
           </ol>
           <div class="carousel-inner car_in">
@@ -141,7 +141,7 @@
                 <% @staffnews.where.not(id: @staffnews.first.id).each do |stnews| %>
                   <button type="button" class="list-group-item cus-but" onClick="window.open('<%= stnews.linkd %>','_blank')">
                     <span class="ghost"></span>
-                    <%= stnews.stnews %>
+                    <%= raw(stnews.stnews) %>
                   </button>
                   <% end %>
                 </div>
@@ -181,7 +181,7 @@
                   <% @studentnews.where.not(id: @studentnews.first.id).each do |stnews| %>
                     <button type="button" class="list-group-item cus-but" onClick="window.open('<%= stnews.linkd %>','_blank')">
                       <span class="ghost"></span>
-                      <%= stnews.stnews %>
+                      <%= raw(stnews.stnews) %>
                     </button>
                   <% end %>
                 </div>
