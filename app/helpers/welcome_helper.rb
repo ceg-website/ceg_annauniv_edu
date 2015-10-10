@@ -15,7 +15,7 @@ module WelcomeHelper
     html = ""
     rss.items.first(10).each do |i|
     html << "<tr class='save-me' ><td class='col-md-1'><img src='/assets/gt_logo.jpg' class='gt-img'></td>
-              <td class='col-md-8'><span class='auth-name'>#{i.author}</span><span class='topic'><a href='#{i.link}'>#{i.title}</a></span></td>
+              <td class='col-md-8'><span class='auth-name'>#{i.author}</span><span class='topic'><a href='#{i.link}' target = '_blank'>#{i.title}</a></span></td>
               <td class='col-md-2'><span class='glyphicon glyphicon-time' aria-hidden='true' style='padding-right:5px;''></span>#{i.pubDate.strftime("%d %b, %Y")}</td></tr>"
     end 
     html
