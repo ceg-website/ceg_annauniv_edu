@@ -70,6 +70,6 @@ class StudentnewsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def studentnews_params
-      params.require(:studentnews).permit(:stnews, :stid)
+      params.require(:studentnews).permit(:stnews, :stid, :pdf)
     end
 end

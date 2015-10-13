@@ -70,6 +70,6 @@ class StaffnewsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def staffnews_params
-      params.require(:staffnews).permit(:stnews, :stid)
+      params.require(:staffnews).permit(:stnews, :stid, :pdf)
     end
 end

@@ -52,19 +52,6 @@ config.model Club do
   end
 end
 
-config.model Studentnews do
-  edit do
-    field :stnews, :string
-    field :linkd, :string
-  end
-end
-
-config.model Staffnews do
-  edit do
-    field :stnews, :string
-    field :linkd, :string
-  end
-end
   ## == Cancan ==
   # config.authorize_with :cancan
 
