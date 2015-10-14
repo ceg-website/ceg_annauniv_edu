@@ -25,6 +25,8 @@ Rails.application.routes.draw do
 
   get 'campuslife/societies'
 
+  get 'campuslife/placements'
+
   get 'campuslife/sports'
 
   get 'campuslife/isrp'

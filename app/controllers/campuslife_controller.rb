@@ -13,7 +13,8 @@ class CampuslifeController < ApplicationController
 
   def societies
   end
-
+  def placements
+  end
   def sports
   end
 
