@@ -14,6 +14,33 @@ RailsAdmin.config do |config|
   config.current_user_method(&:current_user)
 end
 
+config.model Studentnews do 
+	edit do
+		field :stnews
+		field :pdf
+		field :stid do 
+			label "Choose ID : enter 1 - for pdf and 2 - for just external links" 
+		end
+		field :linkd do
+			label "Link : external link non-pdf, enter 2 in the stid field pls"
+		end
+	end
+end
+
+
+config.model Staffnews do 
+	edit do
+		field :stnews
+		field :pdf
+		field :stid do 
+			label "Choose ID : enter 1 - for pdf and 2 - for just external links" 
+		end
+		field :linkd do
+			label "Link : external link non-pdf, enter 2 in the stid field pls"
+		end
+	end
+end
+
 config.model Article do
 	edit do
 		field :title, :string
@@ -23,6 +50,7 @@ config.model Article do
 		field :fimage, :paperclip
 	end
 end
+
 config.model Department do
   edit do
     field :dname, :string
