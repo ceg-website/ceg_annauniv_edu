@@ -18,12 +18,18 @@ config.model Studentnews do
 	edit do
 		field :stnews
 		field :pdf
-		field :stid do 
-			label "Choose ID : enter 1 - for pdf and 2 - for just external links" 
+		field :ispfd do
+			label "Is PDF ? "
 		end
 		field :linkd do
-			label "Link : external link non-pdf, enter 2 in the stid field pls"
+			label "Non-PDF Link :  enter if 'ispdf' option is false, else leave blank"
 		end
+#		field :stid do 
+#			label "Choose ID : enter 1 - for pdf and 2 - for just external links" 
+#		end
+#		field :linkd do
+#			label "Link : external link non-pdf, enter 2 in the stid field pls"
+#		end
 	end
 end
 
@@ -32,12 +38,19 @@ config.model Staffnews do
 	edit do
 		field :stnews
 		field :pdf
-		field :stid do 
-			label "Choose ID : enter 1 - for pdf and 2 - for just external links" 
+		field :ispfd do
+			label "Is PDF ?"
 		end
 		field :linkd do
-			label "Link : external link non-pdf, enter 2 in the stid field pls"
+			label "Non-PDF Link :  enter if 'ispdf' option is false, else leave blank"
 		end
+#		field :stid do 
+#		field :stid do 
+#			label "Choose ID : enter 1 - for pdf and 2 - for just external links" 
+#		end
+#		field :linkd do
+#			label "Link : external link non-pdf, enter 2 in the stid field pls"
+#		end
 	end
 end
 

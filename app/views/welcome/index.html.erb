@@ -135,12 +135,12 @@
                   </div>
                 </div>
                 <div class="list-group but-grp">
-                <button type="button" class="list-group-item first_but cus-but" onClick="window.open('<%= @staffnews.first.pdf_url %>','_blank')">
+                <button type="button" class="list-group-item first_but cus-but" onClick="window.open('<% if @staffnews.first.ispfd == true %><%= @staffnews.first.pdf_url %><% else %><%= @staffnews.first.linkd %><% end %>','_blank')">
                   <span class="ghost"></span>
                   <a><%= raw(@staffnews.first.stnews) %></a>
                 </button>
                 <% @staffnews.where.not(id: @staffnews.first.id).each do |stnews| %>
-                  <button type="button" class="list-group-item cus-but" onClick="window.open('<%= stnews.pdf_url %>','_blank')">
+                  <button type="button" class="list-group-item cus-but" onClick="window.open('<% if stnews.ispfd == true %><%= stnews.pdf_url %><% else %><%= stnews.linkd %><% end %>','_blank')">
                     <span class="ghost"></span>
                     <a><%= raw(stnews.stnews) %></a>
                   </button>
@@ -174,13 +174,13 @@
                 <div class="list-group but-grp">
 
                   
-                    <button type="button" class="list-group-item first_but cus-but" onClick="window.open('<%= @studentnews.first.pdf_url %>','_blank')">
+                    <button type="button" class="list-group-item first_but cus-but" onClick="window.open('<% if @studentnews.first.ispfd == true %><%= @studentnews.first.pdf_url %><% else %><%= @studentnews.first.linkd %><% end %>','_blank')">
                       <span class="ghost"></span>
                       <a><%= raw(@studentnews.first.stnews) %></a>
                     </button>
                   
                   <% @studentnews.where.not(id: @studentnews.first.id).each do |stnews| %>
-                    <button type="button" class="list-group-item cus-but" onClick="window.open('<%= stnews.pdf_url %>','_blank')">
+                    <button type="button" class="list-group-item cus-but" onClick="window.open('<% if stnews.ispfd == true %><%= stnews.pdf_url %><% else %><%= stnews.linkd %><% end %>','_blank')">
                       <span class="ghost"></span>
                       <a><%= raw(stnews.stnews) %></a>
                     </button>
