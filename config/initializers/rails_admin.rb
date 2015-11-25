@@ -64,6 +64,14 @@ config.model Article do
 	end
 end
 
+config.model Project do
+  edit do
+    field :pname, :string
+    field :pcontent, :ck_editor
+  end
+end
+
+
 config.model Department do
   edit do
     field :dname, :string

@@ -1,0 +1,23 @@
+
+
+<p id="notice"><%= notice %></p>
+  
+<div class="container top-pad">
+      <div class="row"> 
+        <div class="col-md-12 top-padd" style="margin-top:50px">
+          <h2>Projects</h2>
+          <ul class = "quick-links">
+            <%  @projects.each do |project| %>
+              <li>
+                <span class="desig"><%= project.pname %> </span> <%= link_to 'View More', project %>
+              </li>
+            <% end %>
+          </ul>
+      </div>
+      </div>
+      </div></div>
+    </div>
+      
+    
+
+    

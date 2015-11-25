@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+  
+<div class="container top-pad">
+      <div class="row"> 
+        <div class="col-md-3 top-padd" style="margin-top:50px">
+          <h3>Projects</h3>
+          <div class="list-group"><a href="/  " class="button">
+            <button type="button" class="list-group-item cus-but">
+            <span class="ghost"></span><span class="cir"></span>
+              Back to Home
+            </button>
+            </a>
+            <a href="/projects" class="button">
+            <button type="button" class="list-group-item cus-but">
+            <span class="ghost"></span><span class="cir"></span>
+              Back to Projects
+            </button>
+          </a>
+          </div>
+        </div>
+        <div class="col-md-9 top-padd" style="margin-top:50px">
+          <h2><%= @project.pname %></h2><br/><br/>
+              <span class="desig"><%= raw(@project.pcontent) %></span>
+      </div>
+      </div>
+      </div></div>
+    </div>
+      
