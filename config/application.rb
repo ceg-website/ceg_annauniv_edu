@@ -25,5 +25,8 @@ module App
 
     # for heroku deployment added
     config.assets.initialize_on_precompile = false
+	
+    # for rack attack
+    config.middleware.use Rack::Attack
   end
 end
